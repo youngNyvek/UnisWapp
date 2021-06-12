@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { View, StyleSheet, Text, StatusBar, TextInput, TouchableOpacity, Modal, FlatList } from 'react-native';
-import UniCurrency from './services/api';
+import UniCurrency from '../services/api';
 import CurrencyInput from 'react-native-currency-input';
 import 'intl';
 import 'intl/locale-data/jsonp/en';
 import NumericInput from 'react-native-numeric-input';
-import {Orders} from './database/vasernIndex';
-
+import {Orders} from '../database/vasernIndex';
+import OrderCard from './OrderCard';
 export default function App() {
     const [brl, setBrl] = useState(0);
     const [orders, setOrders] = useState([]);
@@ -110,35 +110,10 @@ export default function App() {
                         <View style={{ width: '100%',  height: 60, marginBottom: 10, flex: 1 }}>
 
                             <FlatList
-                                data={orders}
+                                data={orders.reverse()}
                                 contentContainerStyle={{ padding: 20, paddingBottom: 10}}
                                 renderItem={(render) => (
-                                    <View style={{ flexDirection: 'row',borderRadius: 4, backgroundColor: '#201936',justifyContent: 'space-around', padding: 5 ,marginBottom: 10 }}>
-                                        <   Text style={{ color: '#d1b92e', textAlign: 'center' }}>
-                                            Cotação
-                                    {'\n'}
-                                            {'\n'}
-                                            {render.item.cotation}
-                                        </Text >
-                                        <Text style={{ color: '#d1b92e', textAlign: 'center' }}>
-                                            qtd.
-                                    {'\n'}
-                                            {'\n'}
-                                            {render.item.qtd}
-                                        </Text>
-                                        <Text style={{ color: '#d1b92e', textAlign: 'center' }}>
-                                            Valor
-                                    {'\n'}
-                                            {'\n'}
-                                            {render.item.value}
-                                        </Text>
-                                        <Text style={{ color: '#d1b92e', textAlign: 'center' }}>
-                                            Data
-                                    {'\n'}
-                                            {'\n'}
-                                            {render.item.date}
-                                        </Text>
-                                    </View>
+                                    <OrderCard render={render}/>
                                 )}
 
                                 keyExtractor={(item, index) => `item${index}`}
