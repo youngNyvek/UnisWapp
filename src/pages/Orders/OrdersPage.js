@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { View, StyleSheet, Text, StatusBar, TextInput, TouchableOpacity, Modal, FlatList } from 'react-native';
-import UniCurrency from '../services/api';
+import UniCurrency from '../../services/api';
 import CurrencyInput from 'react-native-currency-input';
 import 'intl';
 import 'intl/locale-data/jsonp/en';
 import NumericInput from 'react-native-numeric-input';
-import {Orders} from '../database/vasernIndex';
+import {Orders} from '../../database/vasernIndex';
 import OrderCard from './OrderCard';
 export default function App() {
     const [brl, setBrl] = useState(0);

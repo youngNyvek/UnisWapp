@@ -1,19 +1,24 @@
 import 'react-native-gesture-handler';
-import React from 'react';
+import React, {useContext} from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { View, Text, StatusBar } from 'react-native';
-import  {SelectedIDProvider} from './contexts/selectedID'
 
-import Routes from './routes/RoutesNavigation';
+import AuthProvider from './contexts/auth';
+
+import Routes from './routes/index';
 
 const App = () => {
-    return(
-            <NavigationContainer>
-                <StatusBar barStyle='light-content' backgroundColor='#72bf49' hidden/>
-                    <View style={{flex: 1}}> 
-                        <Routes/>
-                    </View>
-            </NavigationContainer>
+    
+    
+    return (
+        <NavigationContainer>
+            <StatusBar barStyle='light-content' backgroundColor='#72bf49' hidden />
+            <AuthProvider>
+                <View style={{ flex: 1 }}>
+                    <Routes />
+                </View>
+            </AuthProvider>
+        </NavigationContainer>
 
     )
 }

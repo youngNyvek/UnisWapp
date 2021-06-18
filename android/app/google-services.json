@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "722528169483",
+    "project_id": "uniswapp-74778",
+    "storage_bucket": "uniswapp-74778.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:722528169483:android:5a72f79f4088da58d1a10e",
+        "android_client_info": {
+          "package_name": "com.uniswapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "722528169483-1p3q5mork5ope2rp4jd94vpotrcmm7ug.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDBtnTK3OjIsRzGe0FBXJgw5Qyb4UOlM_c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "722528169483-1p3q5mork5ope2rp4jd94vpotrcmm7ug.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

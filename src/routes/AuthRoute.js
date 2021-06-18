@@ -1,7 +1,7 @@
 import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 
-import OrdersPage from '../pages/Orders/OrdersPage';
+import SingIn from '../pages/SignIn/SingIn';
 const Route = createStackNavigator();
 
 export default () => {
@@ -11,8 +11,8 @@ export default () => {
             headerShown: false,
             cardStyle: { backgroundColor: '#7159c1'}
         }}
-        initialRouteName="Orders">
-        <Route.Screen name="OrdersPage" component={OrdersPage}/>
+        initialRouteName="SingIn">
+        <Route.Screen name="SingIn" component={SingIn}/>
 
       
     </Route.Navigator>
